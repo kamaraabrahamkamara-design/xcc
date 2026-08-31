@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google AI Mode Hub</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --text-muted: #aaa;
+            --accent-color: #8ab4f8;
+            --border-color: #333;
+        }
+
+        @media (prefers-color-scheme: light) {
+            :root {
+                --bg-color: #f8f9fa;
+                --card-bg: #ffffff;
+                --text-color: #202124;
+                --text-muted: #5f6368;
+                --accent-color: #1a73e8;
+                --border-color: #dadce0;
+            }
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        header {
+            width: 100%;
+            max-width: 800px;
+            padding: 40px 20px 20px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        p.subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-top: 0;
+        }
+
+        main {
+            width: 100%;
+            max-width: 800px;
+            padding: 0 20px 40px;
+            box-sizing: border-box;
+        }
+
+        .search-container {
+            display: flex;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 6px 14px;
+            margin-bottom: 30px;
+            box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+        }
+
+        .search-container input {
+            flex: 1;
+            border: none;
+            background: transparent;
+            color: var(--text-color);
+            font-size: 16px;
+            padding: 8px;
+            outline: none;
+        }
+
+        .search-container button {
+            background: none;
+            border: none;
+            color: var(--accent-color);
+            font-weight: bold;
+            cursor: pointer;
+            padding: 0 8px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .card h2 {
+            font-size: 1.25rem;
+            margin-top: 0;
+            margin-bottom: 12px;
+            color: var(--accent-color);
+            font-weight: 500;
+        }
+
+        .card p {
+            margin: 0;
+            color: var(--text-muted);
+            line-height: 1.5;
+            font-size: 0.95rem;
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 20px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            text-align: center;
+            width: 100%;
+            border-top: 1px solid var(--border-color);
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Google AI Mode</h1>
+        <p class="subtitle">Experience an advanced conversational search web application.</p>
+    </header>
+
+    <main>
+        <div class="search-container">
+            <input type="text" placeholder="Ask anything or explore features below..." id="queryInput">
+            <button onclick="handleSearch()">Search</button>
+        </div>
+
+        <div class="features-grid">
+            <div class="card">
+                <h2>Complex Queries</h2>
+                <p>Breaks down long, multi-part, and highly detailed questions into smaller background tasks seamlessly.</p>
+            </div>
+            <div class="card">
+                <h2>Multimodal Input</h2>
+                <p>Accepts text, voice, images, and video natively to let you search exactly the way you want.</p>
+            </div>
+            <div class="card">
+                <h2>Agentic Tasks</h2>
+                <p>Helps you complete real-world actions like booking events, reserving tables, or ordering items via partners.</p>
+            </div>
+            <div class="card">
+                <h2>Follow-up Threads</h2>
+                <p>Allows deep, conversational back-and-forth interactions to naturally refine your search results.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 AI Search Web Hub Application. All rights reserved.
+    </footer>
+
+    <script>
+        function handleSearch() {
+            const query = document.getElementById('queryInput').value;
+            if (query.trim() !== '') {
+                alert('AI Mode Simulation: Processing query -> "' + query + '"');
+            } else {
+                alert('Please enter a query to search.');
+            }
+        }
+    </script>
+</body>
+</html>
